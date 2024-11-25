@@ -13,7 +13,12 @@ const TodoItem = ({ todo, onToggleComplete, onDelete }) => {
       >
         {todo.text}
       </span>
-      <button onClick={() => onDelete(todo.id)}>Delete</button>
+      <button
+        className="bg-[#93939393] px-4 py-2 ml-4 rounded hover:bg-[#838383]"
+        onClick={() => onDelete(todo.id)}
+      >
+        Delete
+      </button>
     </li>
   );
 };

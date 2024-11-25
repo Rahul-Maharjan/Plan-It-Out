@@ -38,21 +38,23 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>To-Do App</h1>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Add a new todo"
-        onKeyDown={handleKeyDown}
-      />
-      <button onClick={handleAddTodo}>Add</button>
-      <TodoList
-        todos={todos}
-        onToggleComplete={handleToggleComplete}
-        onDelete={handleDeleteTodo}
-      />
+    <div className="flex items-center justify-center w-full h-screen">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold mb-4">To-Do App</h1>
+        <input
+          type="text"
+          value={newTodo}
+          onChange={(e) => setNewTodo(e.target.value)}
+          placeholder="Add a new todo"
+          onKeyDown={handleKeyDown}
+        />
+        <button onClick={handleAddTodo}>Add</button>
+        <TodoList
+          todos={todos}
+          onToggleComplete={handleToggleComplete}
+          onDelete={handleDeleteTodo}
+        />
+      </div>
     </div>
   );
 };
